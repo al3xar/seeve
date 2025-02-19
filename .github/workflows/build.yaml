@@ -19,7 +19,7 @@ jobs:
         with:
           endpoint: '${{ secrets.WIREGUARD_ENDPOINT }}'
           endpoint_public_key: '${{ secrets.WIREGUARD_ENDPOINT_PUBLIC }}'
-          ips: '${{ secrets.WIREGUARD_IP }}'
+          ips: '${{ secrets.WIREGUARD_IPS }}'
           allowed_ips: '${{ secrets.WIREGUARD_ALLOWED_IPS }}'
           private_key: '${{ secrets.WIREGUARD_PRIVATE }}'
           preshared_key: '${{ secrets.WIREGUARD_PRESHARED }}'
@@ -30,7 +30,6 @@ jobs:
       - name: Verify Sonar and External conection
         run: |
           curl -I http://sonar.al3xar.internal
-          curl -I https://google.es
       - uses: SonarSource/sonarqube-scan-action@v4
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

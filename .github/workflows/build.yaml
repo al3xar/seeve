@@ -19,7 +19,7 @@ jobs:
         with:
           endpoint: '${{ secrets.WIREGUARD_ENDPOINT }}'
           endpoint_public_key: '${{ secrets.WIREGUARD_ENDPOINT_PUBLIC }}'
-          ips: '${{ secrets.WIREGUARD_IPS }}'
+          ips: '${{ secrets.WIREGUARD_IP }}'
           allowed_ips: '${{ secrets.WIREGUARD_ALLOWED_IPS }}'
           private_key: '${{ secrets.WIREGUARD_PRIVATE }}'
           preshared_key: '${{ secrets.WIREGUARD_PRESHARED }}'
